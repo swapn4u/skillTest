@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ra9-2f-3IY">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ProfilePageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ProfilePageViewController" customModule="SkillTestModule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-gY-88A">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.10281170685279184" green="0.10281170685279184" blue="0.10281170685279184" alpha="0.87821061643835618" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="M0h-rt-sz5">
+                                    <size key="itemSize" width="365" height="386"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileInfoCell" id="pgF-Wu-zi3" customClass="ProfileInfoCell" customModule="SkillTestModule" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="365" height="386"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="386"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RTw-DA-QZ8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="311"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="311" id="EHo-Li-Ecz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igf-ZU-4bW">
+                                                    <rect key="frame" x="0.0" y="323" width="365" height="58"/>
+                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
+                                                    <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.10281170689999999" green="0.10281170689999999" blue="0.10281170689999999" alpha="0.87821061639999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="igf-ZU-4bW" secondAttribute="trailing" id="9sf-tR-gUY"/>
+                                            <constraint firstItem="igf-ZU-4bW" firstAttribute="top" secondItem="RTw-DA-QZ8" secondAttribute="bottom" constant="12" id="DA3-nS-zzG"/>
+                                            <constraint firstAttribute="trailing" secondItem="RTw-DA-QZ8" secondAttribute="trailing" id="LjV-aL-2JY"/>
+                                            <constraint firstItem="igf-ZU-4bW" firstAttribute="leading" secondItem="pgF-Wu-zi3" secondAttribute="leading" id="OJ9-0D-r9S"/>
+                                            <constraint firstAttribute="bottom" secondItem="igf-ZU-4bW" secondAttribute="bottom" constant="5" id="RCT-iP-uPw"/>
+                                            <constraint firstItem="RTw-DA-QZ8" firstAttribute="top" secondItem="pgF-Wu-zi3" secondAttribute="top" id="er3-Ba-bAU"/>
+                                            <constraint firstItem="RTw-DA-QZ8" firstAttribute="leading" secondItem="pgF-Wu-zi3" secondAttribute="leading" id="jrH-N2-nAx"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="profileImageView" destination="RTw-DA-QZ8" id="eHs-Ol-GZR"/>
+                                            <outlet property="profileNameLabel" destination="igf-ZU-4bW" id="CBh-Zd-9m9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rNP-1A-Ge1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TDk-I1-8dc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e9d-gY-88A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="32I-S2-dbv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e9d-gY-88A" secondAttribute="trailing" id="9mE-4a-jlI"/>
+                            <constraint firstItem="e9d-gY-88A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ke1-8Q-fwi"/>
+                            <constraint firstItem="e9d-gY-88A" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mym-DY-Rfm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="anW-YQ-Zkd"/>
+                    <connections>
+                        <outlet property="ProfileHandler" destination="vfN-C7-daS" id="6ce-c6-NuP"/>
+                        <outlet property="collectionView" destination="e9d-gY-88A" id="HU3-XW-hOJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="vfN-C7-daS" customClass="ViewModel" customModule="SkillTestModule" customModuleProvider="target">
+                    <connections>
+                        <outlet property="imageHandler" destination="qpE-Ew-Fnd" id="vsu-T5-84c"/>
+                        <outlet property="serverManager" destination="DIc-uH-Eer" id="Oub-6V-sWj"/>
+                    </connections>
+                </customObject>
+                <customObject id="DIc-uH-Eer" customClass="ServerManager" customModule="SkillTestModule" customModuleProvider="target"/>
+                <customObject id="qpE-Ew-Fnd" customClass="ImageDownLoader" customModule="SkillTestModule" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.00492610837438"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="aWI-8G-DXr">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IOc-0j-MWn" customClass="DetailsViewController" customModule="SkillTestModule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y6A-eU-ABU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="euj-sC-9sg">
+                                <rect key="frame" x="16" y="88" width="343" height="690"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_imege_to_preview" translatesAutoresizingMaskIntoConstraints="NO" id="P7q-pb-GUy">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="340"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xxY-rY-6Hg">
+                                        <rect key="frame" x="0.0" y="350" width="343" height="340"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="euj-sC-9sg" firstAttribute="bottom" secondItem="XJE-7S-IOk" secondAttribute="bottom" id="Qlh-WP-lEe"/>
+                            <constraint firstItem="euj-sC-9sg" firstAttribute="leading" secondItem="XJE-7S-IOk" secondAttribute="leading" constant="16" id="hs2-WG-Ciu"/>
+                            <constraint firstItem="euj-sC-9sg" firstAttribute="top" secondItem="XJE-7S-IOk" secondAttribute="top" id="rIx-xA-lst"/>
+                            <constraint firstItem="XJE-7S-IOk" firstAttribute="trailing" secondItem="euj-sC-9sg" secondAttribute="trailing" constant="16" id="z2I-E6-emz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XJE-7S-IOk"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="xxY-rY-6Hg" id="kVq-CB-29q"/>
+                        <outlet property="profileDetailImageview" destination="P7q-pb-GUy" id="hLm-Xm-EDO"/>
+                        <outlet property="statckView" destination="euj-sC-9sg" id="WQj-OO-s0x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9H-xx-gFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743.2" y="133.00492610837438"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tus-hs-3hd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ra9-2f-3IY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qoD-Dh-Gc3">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DlH-t3-6Ue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4K-mY-C1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no_imege_to_preview" width="100" height="66"/>
+    </resources>
+</document>
